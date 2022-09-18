@@ -3,7 +3,9 @@
 This is for MACOSX Only!
 
 ## Requirements
-[Homebrew]("https://brew.sh/")
+1. [Homebrew]("https://brew.sh/")
+
+2. Make sure your homestead folder is saved under `~/vagrant/homestead/`, else change the settings in the `laravel.sh` script
 
 ## Steps
 ### PHP Install
@@ -15,3 +17,11 @@ brew install php@7.4
 ```bash
 brew install php@8.1
 ```
+
+### Run the tool (OPTION 1)
+```bash
+bash laravel.sh
+```
+
+### Run the tool (OPTION 2)
+Double click
