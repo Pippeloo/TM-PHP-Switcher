@@ -3,7 +3,9 @@
 This is for MACOSX Only!
 
 ## Requirements
-1. [Homebrew]("https://brew.sh/")
+1. [Homebrew](https://brew.sh/)
+
+2. [VirtualBox](https://www.virtualbox.org/)
 
 2. Make sure your homestead folder is saved under `~/vagrant/homestead/`, else change the settings in the `laravel.sh` script
 
