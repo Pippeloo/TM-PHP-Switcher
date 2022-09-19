@@ -57,10 +57,10 @@ function home {
                 php --version;;
         php81)  echo "Switch to PHP 8.1.xx"
                 brew unlink php@7.4
-                brew link php@8.1 --force;;
+                brew link php --force --overwrite;;
         php74)  echo "Switch to PHP 7.4.xx"
-                brew unlink php@8.1
-                brew link php@7.4;;
+                brew unlink php
+                brew link php@7.4 --force --overwrite;;
 
       0) exit 0;;
     
