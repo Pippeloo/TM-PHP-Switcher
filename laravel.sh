@@ -4,6 +4,9 @@
 HOMESTEAD_PATH="$HOME/vagrant/Homestead";
 cd $HOMESTEAD_PATH;
 
+RED='\033[0;31m';
+NC='\033[0m';
+
 function home {
     clear;
     echo "Select a task:";
@@ -23,6 +26,7 @@ function home {
     echo " php74 : Switch to PHP 7.4.xx";
     echo "-----------------------------------------"
     echo;
+    echo " m : Show this menu";
     echo " 0 : Exit";
     echo;
     echo -n "Type option: ";
@@ -56,13 +60,19 @@ function home {
         php)    echo "Show current running PHP version"
                 php --version;;
         php81)  echo "Switch to PHP 8.1.xx"
-                brew unlink php@7.4
+                brew unlink php
                 brew link php --force --overwrite;;
         php74)  echo "Switch to PHP 7.4.xx"
                 brew unlink php
                 brew link php@7.4 --force --overwrite;;
+        # Show the menu again
+        m)  echo "Show menu again"
+            home;;
 
-      0) exit 0;;
+        0)  exit 0;;
+
+        # Print error message if user enters other than listed options in red color
+        *) echo -e "${RED}Error: Invalid option. Please try again.${NC}";;
     
     esac
       echo -n "Type option: ";
